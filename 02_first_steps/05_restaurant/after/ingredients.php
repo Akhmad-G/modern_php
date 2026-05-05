@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/simple.css" />
-    <link rel="stylesheet" href="./styles/custom.css" />
-    <title>Culinary Cove &bull; Our mission</title>
-</head>
-<body>
-  <header class="header-with-background" style="background-image: url('images/pexels-engin-akyurt-1435904.jpg'); ">
-    <h1>Culinary Cove</h1>
-    <p>Your sanctuary for exceptional flavors</p>
-    <nav>
-      <a href="our-mission.html">Our mission</a>
-      <a href="ingredients.html">Ingredients</a>
-    </nav>
-  </header>
-
-  <main>
+<?php include "includes/header.inc.php"; ?>
     <h1>Our ingredients</h1>
     <p>
       At Culinary Cove, our ethos is deeply rooted in the belief that
@@ -48,10 +29,4 @@
       meal—it becomes a journey into a world of pure, unadulterated
       taste.
     </p>
-  </main>
-
-  <footer>
-    <p>Culinary Cove's website.</p>
-  </footer>
-</body>
-</html>
+<?php include "includes/footer.inc.php"; ?>

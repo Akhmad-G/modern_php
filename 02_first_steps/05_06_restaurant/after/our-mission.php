@@ -1,6 +1,9 @@
 <?php 
 
 $pageTitle = 'Our mission';
+$bodyImage = "images/pexels-burak-the-weekender-735869.jpg";
+$headerImage = "images/pexels-engin-akyurt-1435904.jpg";
+
 include "includes/header.inc.php"; ?>
     <h1>Our mission</h1>
     <p>
@@ -14,7 +17,7 @@ include "includes/header.inc.php"; ?>
     </p>
     <figure style="text-align: center;">
       <img style="max-width: 20rem;" 
-           src="images/pexels-burak-the-weekender-735869.jpg" 
+           src=<?php echo $bodyImage; ?>
            alt="Our amazing restaurant" />
       <figcaption>Our amazing restaurant</figcaption>
     </figure>

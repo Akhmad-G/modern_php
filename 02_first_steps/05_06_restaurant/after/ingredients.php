@@ -1,4 +1,7 @@
-<?php include "includes/header.inc.php"; ?>
+<?php 
+
+$pageTitle = 'Ingredients';
+include "includes/header.inc.php"; ?>
     <h1>Our ingredients</h1>
     <p>
       At Culinary Cove, our ethos is deeply rooted in the belief that

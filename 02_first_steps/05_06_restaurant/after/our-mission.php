@@ -1,4 +1,7 @@
-<?php include "includes/header.inc.php"; ?>
+<?php 
+
+$pageTitle = 'Our mission';
+include "includes/header.inc.php"; ?>
     <h1>Our mission</h1>
     <p>
       At Culinary Cove, our core mission is to offer a sanctuary for 

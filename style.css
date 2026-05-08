@@ -1,27 +1,27 @@
 body {
-    background-color: #03001C;
-    color: #5B8FB9;
-    text-align: center;
+  background-color: #03001C;
+  color: #5B8FB9;
+  text-align: center;
 }
 
 a {
-    color: #5B8FB9;
-    text-decoration: none;
+  color: #5B8FB9;
+  text-decoration: none;
 }
 
 h1 a {
-    color: #B6EADA;
+  color: #B6EADA;
 }
 
 content {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.5rem;
 }
 
 ul {
-    list-style: none;
-    text-align: left;
-    line-height: 1.5em;
+  list-style: none;
+  text-align: left;
+  line-height: 1.5em;
 }

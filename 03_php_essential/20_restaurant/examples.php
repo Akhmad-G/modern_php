@@ -5,9 +5,9 @@ $isRed = false;
 ?>
 
 <?php if (!empty($isRed)): ?>
-    <h1 style="color: red;">PHP is amazing!</h1>
+  <h1 style="color: red;">PHP is amazing!</h1>
 <?php else: ?>
-    <h1>PHP is amazing!</h1>
+  <h1>PHP is amazing!</h1>
 <?php endif; ?>
 
 

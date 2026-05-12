@@ -13,45 +13,8 @@
   <h1 style="text-align: center">Arrays</h1>
   <ul>
     <li><a href="04_coding_exercise_9.php">Coding Exercise 9</a></li>
-    <li><a href=""></a></li>
+    <li><a href="04_coding_exercise_10.php">Coding Exercise 10</a></li>
   </ul>
-  <h2>Test:</h2>
-  <pre>
-    <?php
-    $waitingList = ['Dawn White', 'Frank Smith', 'Bob Carter', 'Charlie Davis', 'Eve Black', 'Alice Brown', 'Alice Brown', 'Charlie Davis', 'Grace Jones', 'Hank Green', 'Eve Black', 'Dawn White'];
-    $removeFromList = ['Dawn White', 'Charlie Davis'];
 
-//    var_dump($waitingList);
-
-    $cleanedWaitingList = [];
-    foreach ($waitingList as $participant) {
-      if (!in_array($participant, $removeFromList)) {
-        $cleanedWaitingList[] = $participant;
-//        echo "Check!✅\n";
-      }
-    }
-
-    $cleanedWaitingList = array_unique($cleanedWaitingList);
-    sort($cleanedWaitingList);
-    var_dump($cleanedWaitingList);
-
-    $selectedParticipants = [];
-    foreach ($cleanedWaitingList as $participant) {
-      if (count($selectedParticipants) < 5) {
-        $selectedParticipants[] = $participant;
-      }
-    }
-
-//    var_dump($selectedParticipants);
-    ?>
-  </pre>
-
-  <ul>
-    <?php foreach ($cleanedWaitingList as $participant) if (in_array($participant, $selectedParticipants)) : ?>
-      <li><?php echo $participant . "✅ " ?></li>
-    <?php else: ?>
-      <li><?php echo $participant . "❌ " ?></li>
-    <?php endif; ?>
-  </ul>
 </body>
 </html>

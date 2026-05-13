@@ -33,8 +33,7 @@
 
     var_dump($finalAttendees, $backupCandidates);
 
-    $individualName = 'FDsf';
-    $individualStatus = 'Not found';
+    $individualName = 'Ava Stone';
 
     if (in_array($individualName, $finalAttendees)) {
       $individualStatus = "Final Attendee";
@@ -43,7 +42,7 @@
     } elseif (in_array($individualName, $waitingList)) {
       $position = array_search($individualName, $waitingList) + 1;
       $individualStatus = "Waiting, position $position";
-    }
+    } else $individualStatus = 'Not found';
 
     if ($individualStatus !== "Not found") echo "\n" . $individualName . " you are in " . $individualStatus;
     else echo "\n" . $individualName . $individualStatus;

@@ -1,5 +1,3 @@
-<!--TODO: Need to calculate position on the waiting list, excluding everyone who is on other lists.-->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -39,12 +37,14 @@
           $finalAttendees[] = $name;
         }
       } elseif (count($backupCandidates) < 3) {
-        if (!in_array($name, $backupCandidates)) {
+        if (!in_array($name, $backupCandidates) && !in_array($name, $finalAttendees)) {
           $backupCandidates[] = $name;
-          echo "\nHey $name, we want to inform you that you are one of our backup candidates. 🥳";
+          echo "\nHey $name, we want to inform you that you are one of our backup candidates. 🥳" . "\n";
         }
       } else break;
     }
+    sort($finalAttendees);
+    sort($backupCandidates);
 
 //    var_dump($finalAttendees, $backupCandidates);
 
@@ -57,6 +57,9 @@
       $individualStatus = "Backup Candidate";
     } elseif (in_array($individualName, $waitingList)) {
       $position = array_search($individualName, $waitingList) + 1;
+      foreach ($waitingList as $name) {
+        if (in_array($name, $finalAttendees) or in_array($name, $backupCandidates)) $position--;
+      }
       $individualStatus = "Waiting, position $position";
     } else $individualStatus = "Not found";
 

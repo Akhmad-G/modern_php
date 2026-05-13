@@ -13,59 +13,40 @@
   <h1 style="text-align: center">Coding Exercise 10</h1>
   <pre>
     <?php
-//    $waitingList = [
-//      'Alex Reed',
-//      'Blake Jordan',
-//      'Casey Smith',
-//      'Drew Alex',
-//      'Elliot Ford',
-//      'Finley Harper',
-//      'Jordan Kay',
-//      'Kim Lee',
-//      'Liam Park',
-//      'Morgan Drew'
-//    ];
-    $waitingList = ['Eva Grant', 'Ian Hope', 'Olivia Jane'];
+    $waitingList = ['Ava Stone', 'Ben Short', 'Chloe Hart', 'Dylan Marsh', 'Emma Lake', 'Finn Gale'];
 
-    $priorityParticipants = [];
+    $priorityParticipants = ['Ben Short', 'Chloe Hart', 'Zane Pryor'];
 
     $finalList = array_merge($priorityParticipants, $waitingList);
-//    $finalList = array_unique($finalList);
-    var_dump($finalList);
-    $finalAttendees = array();
-    $backupCandidates = array();
-    foreach ($finalList as $name) {
-      if (count($finalAttendees) < 5) {
-        if (in_array($name, $finalAttendees)) continue;
-        $finalAttendees[] = $name;
-      } elseif (count($backupCandidates) < 3) {
-        if (in_array($name, $backupCandidates) or in_array($name, $finalAttendees)) continue;
-        $backupCandidates[] = $name;
-        echo "\nHey $name, we want to inform you that you are one of our backup candidates. 🥳";
-      } else break;
+    $finalList = array_unique($finalList);
+
+    $finalAttendees = array_slice($finalList, 0, 5);
+    $backupCandidates = array_slice($finalList, 5, 3);
+    $waitingList = array_splice($finalList, 8);
+
+    foreach ($backupCandidates as $name) {
+      echo "\nHey $name, we want to inform you that you are one of our backup candidates. 🥳";
     }
 
     sort($finalAttendees);
     sort($backupCandidates);
 
     var_dump($finalAttendees, $backupCandidates);
-    var_dump(array_unique(['Dylan Marsh', 'Jake Frost', 'Julia Stream', 'Ava Stone', 'Dylan Marsh', 'Emma Lake', 'Grace Hill', 'Henry Cole', 'Kyle Brook', 'Lily Snow', 'Mason Cliff', 'Nora Field', 'Sophia Forest']));
 
-    $individualName = 'Kim Lee';
-    $individualStatus = '';
+    $individualName = 'FDsf';
+    $individualStatus = 'Not found';
 
     if (in_array($individualName, $finalAttendees)) {
       $individualStatus = "Final Attendee";
     } elseif (in_array($individualName, $backupCandidates)) {
       $individualStatus = "Backup Candidate";
-    } elseif (in_array($individualName, $finalList)) {
-      $position = array_search($individualName, $finalList) - 7;
+    } elseif (in_array($individualName, $waitingList)) {
+      $position = array_search($individualName, $waitingList) + 1;
       $individualStatus = "Waiting, position $position";
-    } elseif (count($finalList) > 8 ) {
-      $individualStatus = "Not found";
     }
 
-    echo "\n" . $individualName . " you are in " . $individualStatus;
+    if ($individualStatus !== "Not found") echo "\n" . $individualName . " you are in " . $individualStatus;
+    else echo "\n" . $individualName . $individualStatus;
 
     ?>
   </pre>

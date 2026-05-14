@@ -18,9 +18,9 @@ include "includes/header.inc.php"; ?>
   </p>
   <figure style="text-align: center;">
     <img style="max-width: 20rem;"
-         src=<?php echo $bodyImage; ?>
-         alt="Our amazing restaurant
-    " />
+         src=<?php echo $bodyImage; ?>,
+         alt="Our amazing restaurant"
+    />
     <figcaption>Our amazing restaurant</figcaption>
   </figure>
   <p>

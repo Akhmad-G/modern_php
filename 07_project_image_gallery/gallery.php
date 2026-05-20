@@ -6,16 +6,13 @@ include './inc/images.inc.php';
 <?php include './views/header.php'; ?>
 
 <main class="gallery-container">
-  <!--  --><?php //foreach ($imageTitles AS $imageName => $imageTitle) : ?>
+  <?php foreach ($imageTitles as $imageName => $imageTitle) : ?>
   <div class="gallery-item">
-    <img src="images/1B1A9657.jpg" alt="Snowy Mountain Range">
-    <p class="description"><a href="../index.html">Snowy Mountain Range</a></p>
+    <img src="images/<?php echo e($imageName) ?>" alt="<?php echo e($imageTitle) ?>">
+    <p class="description"><a href="image.php?image=<?php echo e($imageName) ?>"><?php echo e($imageTitle) ?></a></p>
   </div>
+  <?php endforeach; ?>
 
-  <div class="gallery-item">
-    <img src="images/IMG_0219.jpg" alt="Snowy Range">
-    <p class="description"><a href="">Snowy Range</a></p>
-  </div>
 </main>
 
 <?php include './views/footer.php'; ?>

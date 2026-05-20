@@ -1,9 +1,31 @@
+body {
+  display: block;
+}
+
 .gallery-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 1rem;
+  justify-content: space-around;
 }
 
 .gallery-item {
+  align-items: center;
+  margin-top: 1rem;
+  /*border: 1px solid gray;*/
+}
 
+.grid-image {
+  max-width: 1920px;
+  height: 10rem;
+  aspect-ratio: 1920/1080;
+  object-fit: cover;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.poster {
+  width: 50%;
 }

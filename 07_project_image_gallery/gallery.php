@@ -5,14 +5,13 @@ include './inc/images.inc.php';
 ?>
 <?php include './views/header.php'; ?>
 
-<main class="gallery-container">
-  <?php foreach ($imageTitles as $imageName => $imageTitle) : ?>
-  <div class="gallery-item">
-    <img src="images/<?php echo e($imageName) ?>" alt="<?php echo e($imageTitle) ?>">
-    <p class="description"><a href="image.php?image=<?php echo e($imageName) ?>"><?php echo e($imageTitle) ?></a></p>
-  </div>
+<div class="gallery-container">
+  <?php foreach ($imageTitles as $src => $title) : ?>
+    <a href="image.php?<?php echo http_build_query(["image" => $src]); ?>" class="gallery-item">
+      <img class="grid-image" src="images/<?php echo rawurlencode($src); ?>" alt="<?php echo e($title) ?>" />
+      <p class="image-description"><?php echo e($title) ?></p>
+    </a>
   <?php endforeach; ?>
-
-</main>
+</div>
 
 <?php include './views/footer.php'; ?>

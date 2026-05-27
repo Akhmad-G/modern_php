@@ -10,7 +10,7 @@
   <title>Coding Exercise</title>
 </head>
 <body>
-  <h1 style="text-align: center">Coding Exercise 14</h1>
+  <h1 style="text-align: center">Coding Exercise 15</h1>
   <pre>
     <?php
 

@@ -35,15 +35,15 @@
       ],
     ];
 
-    foreach ($campaigns as $campaign => $set) {
+    // I didn't think to use `implode()` to better format the output by selecting the desired separator.
+
+    foreach ($campaigns as $campaign => $adSet) {
       echo e("- " . $campaign . ": ");
-      $i = 0;
-      foreach ($set as $key => $item) {
-        if ($i === 0) echo e('"' . $item["name"] . '"');
-        else echo e(", " . '"' . $item["name"] . '"');
-        $i++;
+      $adSetsName = [];
+      foreach ($adSet as $set => $item) {
+        $adSetsName[] = '"' . $item["name"] . '"';
       }
-      echo e("\n");
+      echo e(implode(", ", $adSetsName) . "\n");
     }
 
     ?>

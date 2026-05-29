@@ -10,5 +10,9 @@
   <link rel="stylesheet" href="/simple.css">
 </head>
 <body>
+  <header>
+    <h1>AQI-Explorer</h1>
+    <nav><a href="index.php">Overview</a></nav>
+  </header>
   <main>
 

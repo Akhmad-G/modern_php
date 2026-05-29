@@ -17,55 +17,80 @@
     require_once "./inc/functions.inc.php";
 
     $campaigns = [
-      'Tech Trends Extravaganza' => [
+      'Gadget Galore' => [
         'AdSet1' => [
-          'name' => 'Launch Special',
-          'targetAudience' => ['Young Adults', 'Tech Enthusiasts'],
-          'clicks' => 150,
-          'impressions' => 10000
+          'name' => 'Smart Home Devices',
+          'targetAudience' => ['Home Owners'],
+          'clicks' => 412,
+          'impressions' => 20480
         ],
         'AdSet2' => [
-          'name' => 'Holiday Sale',
-          'targetAudience' => ['Families', 'Holiday Shoppers'],
-          'clicks' => 250,
-          'impressions' => 15000
-        ],
+          'name' => 'Wearable Tech',
+          'targetAudience' => ['Fitness Fans'],
+          'clicks' => 389,
+          'impressions' => 19500
+        ]
       ],
-      'Seasonal Fashion Frenzy' => [
+      'Tech Trends 2024' => [
         'AdSet1' => [
-          'name' => 'Spring Collection',
-          'targetAudience' => ['Fashion Enthusiasts', 'Women', 'Parents'],
-          'clicks' => 200,
-          'impressions' => 12000
+          'name' => 'Augmented Reality Gadgets',
+          'targetAudience' => ['Gamers', 'Tech Enthusiasts'],
+          'clicks' => 408,
+          'impressions' => 23900
         ],
         'AdSet2' => [
-          'name' => 'Back to School',
-          'targetAudience' => ['Students', 'Parents', 'Young Adults'],
-          'clicks' => 300,
-          'impressions' => 18000
+          'name' => 'Eco-Friendly Tech',
+          'targetAudience' => ['Eco Warriors'],
+          'clicks' => 256,
+          'impressions' => 12800
         ],
-      ],
+        'AdSet3' => [
+          'name' => 'Robotics for Kids',
+          'targetAudience' => ['Parents', 'Tech Enthusiasts'],
+          'clicks' => 530,
+          'impressions' => 26500
+        ]
+      ]
     ];
 
-    $specifiedAudience = "";
+    $specifiedAudience = "Tech Enthusiasts";
+    $adWithHighestCTRForAudience = [
+      "targetAudience" => $specifiedAudience,
+      "highestCTRAdSet" => "",
+      "highestCTR" => 0,
+    ];
 
     $campaignsCTR = [];
     $maxCTR = 0;
     $highestCTR = [];
     $uniqueTargetAudiences = [];
 
+
     foreach ($campaigns as $campaign => $adSet) {
       $campaignClicks = 0;
       $campaignImpressions = 0;
+
       foreach ($adSet as $set => $item) {
         $campaignClicks += $item["clicks"] ?? 0;
         $campaignImpressions += $item["impressions"] ?? 1;
+
         foreach ($item["targetAudience"] as $audience) {
+
           if (!in_array($audience, $uniqueTargetAudiences)) {
             $uniqueTargetAudiences[] = $audience;
-          };
+          }
+
+          if ($audience === $specifiedAudience) {
+            $ctr = round(($item["clicks"] / $item["impressions"]) * 100, 2);
+
+            if ($adWithHighestCTRForAudience["highestCTR"] < $ctr) {
+              $adWithHighestCTRForAudience["highestCTRAdSet"] = $item["name"];
+              $adWithHighestCTRForAudience["highestCTR"] = $ctr;
+            }
+          }
         }
       }
+
       $ctr = round(($campaignClicks / $campaignImpressions) * 100, 2);
       if ($ctr > $maxCTR) {
         $maxCTR = $ctr;
@@ -73,11 +98,6 @@
       }
       $campaignsCTR[$campaign] = $ctr;
     }
-
-    //    var_dump($campaignsCTR);
-    //    var_dump($highestCTR);
-        var_dump($uniqueTargetAudiences);
-
 
     ?>
   </pre>

@@ -2,21 +2,36 @@
 
 require __DIR__ . "/inc/functions.inc.php";
 
-$city = null; // ! ADD to note: use default value
-// ! ADD to note : don't forget to check
+$city = null;
 if (!empty($_GET["city"])) {
   $city = $_GET["city"];
 }
 
-$cities = json_decode(
-  file_get_contents(__DIR__ . "/data/index.json"),
-  true
-);
-
 $filename = null;
-foreach ($cities as $currentCity) {
-  if ($city === $currentCity["city"]) {
-    $filename = $currentCity["filename"];
+if (!empty($city)) {
+  $cities = json_decode(
+    file_get_contents(__DIR__ . "/data/index.json"),
+    true
+  );
+  foreach ($cities as $currentCity) {
+    if ($city === $currentCity["city"]) {
+      $filename = $currentCity["filename"];
+      break;
+    }
+  }
+}
+
+if (!empty($filename)) {
+  $results = json_decode(
+    file_get_contents("compress.bzip2://" . __DIR__ . "/data/" . $filename),
+    true
+  )["results"];
+  foreach ($results as $result) {
+    if ($result["parameter"] !== 'pm25') continue;
+    var_dump($result);
+
+    $month = substr($result["date"]["local"], 0, 7);
+    var_dump($month);
     break;
   }
 }
@@ -25,5 +40,10 @@ foreach ($cities as $currentCity) {
 
 <?php require __DIR__ . "/views/header.inc.php" ?>
 
-<h2><?php echo e($filename) ?></h2>
+<?php if (empty($city)): ?>
+  <p>The city could not be loaded</p>
+<?php else: ?>
+
+<?php endif; ?>
+
 <?php require __DIR__ . "/views/footer.inc.php" ?>

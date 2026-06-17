@@ -66,20 +66,50 @@ if (!empty($filename)) {
   <?php if (!empty($stats)): ?>
     <canvas id="aqi-chart" style="width: 300px; height: 200px;"></canvas>
     <script src="scripts/chart.umd.js"></script>
+    <?php
+    $labels = array_keys($stats);
+    sort($labels);
+
+    var_dump($labels[0]);
+//    var_dump($stats[0]);
+    $pm25 = [];
+    $pm10 = [];
+    foreach ($labels as $label) {
+      $measurements = $stats[$label];
+      $pm25[] = array_sum($measurements["pm25"]["value"]) / count($measurements["pm25"]["value"]);
+      $pm10[] = array_sum($measurements["pm10"]["value"]) / count($measurements["pm10"]["value"]);
+    }
+
+    ?>
+    <?php
+    $units = [];
+    $units["pm25"] = $stats[$labels[0]]['pm25']['unit'][0];
+    $units["pm10"] = $stats[$labels[0]]['pm10']['unit'][0];
+//      var_dump($units);
+    ?>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const ctx = document.getElementById('aqi-chart');
         const chart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: ['Label 01', 'Label 02', 'Label 03', 'Label 04', 'Label 05', 'Label 06', 'Label 07'],
-            datasets: [{
-              label: 'My First Dataset',
-              data: [65, 59, 80, 81, 56, 55, 40],
-              fill: false,
-              borderColor: 'rgb(75, 192, 192)',
-              tension: 0.1
-            }]
+            labels: <?php echo json_encode($labels) ?>,
+            datasets: [
+              {
+                label: <?php echo json_encode("AQI, PM2.5 in {$units['pm25']}") ?>,
+                data: <?php echo json_encode($pm25) ?>,
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+              },
+              {
+                label: <?php echo json_encode("AQI, PM10 in {$units['pm10']}") ?>,
+                data: <?php echo json_encode($pm10) ?>,
+                fill: false,
+                borderColor: 'rgb(255, 75, 192)',
+                tension: 0.1
+              },
+            ]
           }
         });
       });

@@ -10,10 +10,9 @@
   <title>Travel Showcase</title>
 </head>
 <body>
+  <?php require_once __DIR__ . "/inc/functions.inc.php"; ?>
+
   <?php
-
-    require_once __DIR__ . "/inc/functions.inc.php";
-
     $handle = opendir(__DIR__ . "/images");
 
     $images = [];

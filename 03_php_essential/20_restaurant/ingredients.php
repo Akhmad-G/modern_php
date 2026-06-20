@@ -1,9 +1,9 @@
 <?php
 
-$pageTitle = 'Ingredients';
-$pageKey = 'ingredients';
-$headerImg = 'images/pexels-julia-volk-5273044.jpg';
-include 'inc/header.inc.php';
+  $pageTitle = 'Ingredients';
+  $pageKey = 'ingredients';
+  $headerImg = 'images/pexels-julia-volk-5273044.jpg';
+  include 'inc/header.inc.php';
 
 ?>
   <h1>Our ingredients</h1>

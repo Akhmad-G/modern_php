@@ -2,7 +2,7 @@
   $topics = [
     "Kapitel 1. Introduction (link to the course with the introduction)" => "https://www.udemy.com/course/modern-php",
     "Kapitel 2. First Steps with PHP: Build a dynamic Restaurant Website" => "./02_first_steps/index.php",
-    "Kapitel 3. Data Types & Logic Essentials" => "./03_php_essential/php_essential.html",
+    "Kapitel 3. Data Types & Logic Essentials" => "./03_php_essential/index.php",
     "Kapitel 4. Arrays & the foreach Loop" => "./04_arrays/arrays.html",
     "Kapitel 5. Associative Arrays" => "./05_associative_arrays/associative_arrays.html",
     "Kapitel 6. URL Parameters" => "./06_params_and_forms/params_and_forms.html",

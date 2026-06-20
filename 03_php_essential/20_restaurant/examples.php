@@ -1,6 +1,8 @@
+<!--Example of using a PHP conditional statement with HTML tags-->
+
 <?php
 
-$isRed = false;
+  $isRed = false;
 
 ?>
 

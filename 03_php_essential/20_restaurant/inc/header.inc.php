@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/simple.css" />
-  <link rel="stylesheet" href="../styles/custom.css" />
+  <link rel="stylesheet" href="./styles/custom.css" />
   <?php if (!empty($pageTitle)): ?>
     <title>Culinary Cove &bull; <?php echo $pageTitle; ?></title>
   <?php else: ?>
@@ -17,10 +17,10 @@
 </head>
 <body>
   <!--    --><?php
-  /*        if (empty($headerImg)) {
-              $headerImg = "images/pexels-engin-akyurt-1435904.jpg";
-          }
-      */ ?>
+    /*        if (empty($headerImg)) {
+                $headerImg = "images/pexels-engin-akyurt-1435904.jpg";
+            }
+        */ ?>
   <header class="header-with-background"
           style="background-image: url('<?php if (!empty($headerImg)) echo $headerImg; else echo "images/pexels-engin-akyurt-1435904.jpg" ?>'); "
   >
@@ -29,8 +29,8 @@
     <nav>
       <!--          If you set this condition at the very beginning, you can eliminate all the `!empty($pageKey)` checks, since they are needed solely to prevent errors.
                 --><?php
-      /*            if (!isset($pageKey)) $pageKey = '';
-                */ ?>
+        /*            if (!isset($pageKey)) $pageKey = '';
+                  */ ?>
 
       <!--          Option 1-->
       <?php if (!empty($pageKey) && $pageKey === 'mission'): ?>

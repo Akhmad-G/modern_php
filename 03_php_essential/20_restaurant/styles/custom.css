@@ -1,3 +1,10 @@
+header h1,
+header p,
+header > nav a,
+header > nav a:visited {
+  color: rgb(33, 33, 33);
+}
+
 .header-with-background {
   padding-top: 1rem;
   background-repeat: no-repeat;

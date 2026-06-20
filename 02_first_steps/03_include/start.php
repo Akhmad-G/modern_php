@@ -1,6 +1,6 @@
 <!-- <?php
-include 'other.php';
-include 'other.txt';
+  include 'other.php';
+  include 'other.txt';
 ?> -->
 
 <!DOCTYPE html>
@@ -12,8 +12,8 @@ include 'other.txt';
 </head>
 <body>
   <?php
-  include 'other.php';
-  include 'other.txt';
+    include 'other.php';
+    include 'other.txt';
   ?>
 </body>
 </html>

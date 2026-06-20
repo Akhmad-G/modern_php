@@ -1,10 +1,10 @@
 <?php
 
-$pageTitle = "Menu";
-$headerImage = "images/pexels-fwstudio-172289.jpg";
-$bodyImage = "images/pexels-rachel-claire-4577740";
+  $pageTitle = "Menu";
+  $headerImage = "./images/pexels-fwstudio-172289.jpg";
+  $bodyImage = "./images/pexels-rachel-claire-4577740";
 
-include "includes/header.inc.php"
+  include "./includes/header.inc.php"
 ?>
 
   <h1>Our menu</h1>
@@ -27,7 +27,7 @@ include "includes/header.inc.php"
 
   <figure style="text-align: center;">
     <img style="max-width: 20rem;"
-         src="images/pexels-rachel-claire-4577740.jpg"
+         src="./images/pexels-rachel-claire-4577740.jpg"
          alt="Our amazing restaurant"
     />
     <figcaption>Our amazing restaurant</figcaption>

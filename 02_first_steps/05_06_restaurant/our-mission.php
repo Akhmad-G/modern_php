@@ -1,10 +1,11 @@
 <?php
 
-$pageTitle = 'Our mission';
-$bodyImage = "images/pexels-burak-the-weekender-735869.jpg";
-$headerImage = "images/pexels-engin-akyurt-1435904.jpg";
+  $pageTitle = 'Our mission';
+  $bodyImage = "./images/pexels-burak-the-weekender-735869.jpg";
+  $headerImage = "./images/pexels-engin-akyurt-1435904.jpg";
 
-include "includes/header.inc.php"; ?>
+  include "./includes/header.inc.php"; ?>
+
   <h1>Our mission</h1>
   <p>
     At Culinary Cove, our core mission is to offer a sanctuary for
@@ -17,7 +18,7 @@ include "includes/header.inc.php"; ?>
   </p>
   <figure style="text-align: center;">
     <img style="max-width: 20rem;"
-         src=<?php echo $bodyImage; ?>,
+         src="<?php echo $bodyImage; ?>"
          alt="Our amazing restaurant"
     />
     <figcaption>Our amazing restaurant</figcaption>
@@ -33,4 +34,4 @@ include "includes/header.inc.php"; ?>
     just a dish; it's a journey into a world of unique and exciting
     flavors.
   </p>
-<?php include "includes/footer.inc.php"; ?>
+<?php include "./includes/footer.inc.php"; ?>

@@ -1,3 +1,10 @@
+header h1,
+header p,
+header > nav a,
+header > nav a:visited {
+  color: rgb(33, 33, 33);
+}
+
 .header-with-background {
   padding-top: 1rem;
   background-repeat: no-repeat;
@@ -26,16 +33,4 @@
 .header-with-background h1,
 .header-with-background p {
   text-shadow: 0 0 1rem white;
-}
-
-a.active {
-  background-color: var(--accent);
-  border: 1px solid var(--accent);
-  color: white !important;
-}
-
-a.active:hover {
-  color: white !important;
-  background-color: black;
-  border: 1px solid black;
 }

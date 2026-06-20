@@ -1,9 +1,9 @@
 <?php
-$pageTitle = 'Ingredients';
-$headerImage = 'images/pexels-julia-volk-5273044.jpg';
-$bodyImage = "images/pexels-lisa-fotios-1126728.jpg";
+  $pageTitle = 'Ingredients';
+  $headerImage = 'images/pexels-julia-volk-5273044.jpg';
+  $bodyImage = "images/pexels-lisa-fotios-1126728.jpg";
 
-include "includes/header.inc.php"; ?>
+  include "./includes/header.inc.php"; ?>
   <h1>Our ingredients</h1>
   <p>
     At Culinary Cove, our ethos is deeply rooted in the belief that
@@ -18,7 +18,7 @@ include "includes/header.inc.php"; ?>
   </p>
   <figure style="text-align: center;">
     <img style="max-width: 20rem;"
-         src=<?php echo $bodyImage; ?>,
+         src="<?php echo $bodyImage; ?>"
          alt="Our amazing restaurant"
     />
     <figcaption>Our amazing restaurant</figcaption>
@@ -35,4 +35,4 @@ include "includes/header.inc.php"; ?>
     meal—it becomes a journey into a world of pure, unadulterated
     taste.
   </p>
-<?php include "includes/footer.inc.php"; ?>
+<?php include "./includes/footer.inc.php"; ?>

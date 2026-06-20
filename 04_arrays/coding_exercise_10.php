@@ -10,7 +10,7 @@
   <title>Coding Exercise</title>
 </head>
 <body>
-  <h1 style="text-align: center">Coding Exercise 10</h1>
+  <h3 style="text-align: center">Coding Exercise 10</h3>
   <pre>
     <?php
     $waitingList = ['Ava Stone', 'Ben Short', 'Chloe Hart', 'Dylan Marsh', 'Emma Lake', 'Finn Gale'];

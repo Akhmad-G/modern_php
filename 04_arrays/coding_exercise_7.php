@@ -10,7 +10,7 @@
   <title>Coding Exercise</title>
 </head>
 <body>
-  <h1 style="text-align: center">Coding Exercise 10</h1>
+  <h3 style="text-align: center">Coding Exercise 7</h3>
   <pre>
     <?php
 
@@ -21,7 +21,7 @@
       if (in_array("Sunny Days", $playlist)) echo "You have great taste! 'Sunny Days' always lifts the mood!";
       elseif (count($playlist) >= 2) {
         $playlist[1] = "Solar Whispers";
-//        echo 'The song "Solar Whispers added into your playlist"';
+        echo 'The song "Solar Whispers added into your playlist"';
       }
 
     } else echo "Your playlist needs an update. Time to discover more music!";

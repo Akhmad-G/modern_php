@@ -5,7 +5,7 @@
     "Kapitel 3. Data Types & Logic Essentials" => "./03_php_essential/index.php",
     "Kapitel 4. Arrays & the foreach Loop" => "./04_arrays/index.php",
     "Kapitel 5. Associative Arrays" => "./05_associative_arrays/index.php",
-    "Kapitel 6. URL Parameters" => "./06_params_and_forms/params_and_forms.html",
+    "Kapitel 6. URL Parameters" => "./06_params_and_forms/index.php",
     "Kapitel 7. Project: Build a Multi-Page Image Gallery" => "./07_project_image_gallery/gallery.php",
     "Kapitel 8. Advanced Concepts" => "./08_advanced_concepts/advanced_concepts.html",
     "Kapitel 9. Nested Arrays" => "./09_nested_arrays/nested_arrays.html",

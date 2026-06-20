@@ -7,7 +7,7 @@
   <title>Form</title>
 </head>
 <body><pre><?php
-    var_dump($_GET);
+      var_dump($_GET);
     ?></pre>
 
   <?php if (!empty($_GET['book'])): ?>
@@ -18,7 +18,6 @@
     <input type="text" name="book" value="<?php if (!empty($_GET['book'])) echo $_GET['book']; ?>" />
     <input type="submit" value="Submit!" />
   </form>
-
 
 </body>
 </html>

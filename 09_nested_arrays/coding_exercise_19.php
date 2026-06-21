@@ -14,90 +14,91 @@
   <pre>
     <?php
 
-    require_once "./inc/functions.inc.php";
+      require_once "./inc/functions.inc.php";
 
-    $campaigns = [
-      'Gadget Galore' => [
-        'AdSet1' => [
-          'name' => 'Smart Home Devices',
-          'targetAudience' => ['Home Owners'],
-          'clicks' => 412,
-          'impressions' => 20480
+      $campaigns = [
+        'Gadget Galore' => [
+          'AdSet1' => [
+            'name' => 'Smart Home Devices',
+            'targetAudience' => ['Home Owners'],
+            'clicks' => 412,
+            'impressions' => 20480
+          ],
+          'AdSet2' => [
+            'name' => 'Wearable Tech',
+            'targetAudience' => ['Fitness Fans'],
+            'clicks' => 389,
+            'impressions' => 19500
+          ]
         ],
-        'AdSet2' => [
-          'name' => 'Wearable Tech',
-          'targetAudience' => ['Fitness Fans'],
-          'clicks' => 389,
-          'impressions' => 19500
+        'Tech Trends 2024' => [
+          'AdSet1' => [
+            'name' => 'Augmented Reality Gadgets',
+            'targetAudience' => ['Gamers', 'Tech Enthusiasts'],
+            'clicks' => 408,
+            'impressions' => 23900
+          ],
+          'AdSet2' => [
+            'name' => 'Eco-Friendly Tech',
+            'targetAudience' => ['Eco Warriors'],
+            'clicks' => 256,
+            'impressions' => 12800
+          ],
+          'AdSet3' => [
+            'name' => 'Robotics for Kids',
+            'targetAudience' => ['Parents', 'Tech Enthusiasts'],
+            'clicks' => 530,
+            'impressions' => 26500
+          ]
         ]
-      ],
-      'Tech Trends 2024' => [
-        'AdSet1' => [
-          'name' => 'Augmented Reality Gadgets',
-          'targetAudience' => ['Gamers', 'Tech Enthusiasts'],
-          'clicks' => 408,
-          'impressions' => 23900
-        ],
-        'AdSet2' => [
-          'name' => 'Eco-Friendly Tech',
-          'targetAudience' => ['Eco Warriors'],
-          'clicks' => 256,
-          'impressions' => 12800
-        ],
-        'AdSet3' => [
-          'name' => 'Robotics for Kids',
-          'targetAudience' => ['Parents', 'Tech Enthusiasts'],
-          'clicks' => 530,
-          'impressions' => 26500
-        ]
-      ]
-    ];
+      ];
 
-    $specifiedAudience = "Tech Enthusiasts";
-    $adWithHighestCTRForAudience = [
-      "targetAudience" => $specifiedAudience,
-      "highestCTRAdSet" => "",
-      "highestCTR" => 0,
-    ];
+      $specifiedAudience = "Tech Enthusiasts";
+      $adWithHighestCTRForAudience = [
+        "targetAudience" => $specifiedAudience,
+        "highestCTRAdSet" => "",
+        "highestCTR" => 0,
+      ];
 
-    $campaignsCTR = [];
-    $maxCTR = 0;
-    $highestCTR = [];
-    $uniqueTargetAudiences = [];
+      $campaignsCTR = [];
+      $maxCTR = 0;
+      $highestCTR = [];
+      $uniqueTargetAudiences = [];
 
 
-    foreach ($campaigns as $campaign => $adSet) {
-      $campaignClicks = 0;
-      $campaignImpressions = 0;
+      foreach ($campaigns as $campaign => $adSet) {
+        $campaignClicks = 0;
+        $campaignImpressions = 0;
 
-      foreach ($adSet as $set => $item) {
-        $campaignClicks += $item["clicks"] ?? 0;
-        $campaignImpressions += $item["impressions"] ?? 1;
+        foreach ($adSet as $set => $item) {
+          $campaignClicks += $item["clicks"] ?? 0;
+          $campaignImpressions += $item["impressions"] ?? 1;
 
-        foreach ($item["targetAudience"] as $audience) {
+          foreach ($item["targetAudience"] as $audience) {
 
-          if (!in_array($audience, $uniqueTargetAudiences)) {
-            $uniqueTargetAudiences[] = $audience;
-          }
+            if (!in_array($audience, $uniqueTargetAudiences)) {
+              $uniqueTargetAudiences[] = $audience;
+            }
 
-          if ($audience === $specifiedAudience) {
-            $ctr = round(($item["clicks"] / $item["impressions"]) * 100, 2);
+            if ($audience === $specifiedAudience) {
+              $ctr = round(($item["clicks"] / $item["impressions"]) * 100, 2);
 
-            if ($adWithHighestCTRForAudience["highestCTR"] < $ctr) {
-              $adWithHighestCTRForAudience["highestCTRAdSet"] = $item["name"];
-              $adWithHighestCTRForAudience["highestCTR"] = $ctr;
+              if ($adWithHighestCTRForAudience["highestCTR"] < $ctr) {
+                $adWithHighestCTRForAudience["highestCTRAdSet"] = $item["name"];
+                $adWithHighestCTRForAudience["highestCTR"] = $ctr;
+              }
             }
           }
         }
-      }
 
-      $ctr = round(($campaignClicks / $campaignImpressions) * 100, 2);
-      if ($ctr > $maxCTR) {
-        $maxCTR = $ctr;
-        $highestCTR = ["$campaign" => $maxCTR];
+        $ctr = round(($campaignClicks / $campaignImpressions) * 100, 2);
+        if ($ctr > $maxCTR) {
+          $maxCTR = $ctr;
+          $highestCTR = ["$campaign" => $maxCTR];
+        }
+        $campaignsCTR[$campaign] = $ctr;
       }
-      $campaignsCTR[$campaign] = $ctr;
-    }
+      var_dump($campaignsCTR);
 
     ?>
   </pre>

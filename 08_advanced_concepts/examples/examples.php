@@ -1,7 +1,7 @@
 <!--#TODO: Need to try doing it like in Section 6, so that all the examples are on a single page.-->
 
 <?php require_once "../../header.inc.php" ?>
-<h1>Examples</h1>
+<h3>Examples</h3>
 <main>
   <ol start="65">
     <li><a href="type_checking.php">Type Checking: Identify Types with `is_` Functions & Manage Mixed-Type

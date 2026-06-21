@@ -14,37 +14,37 @@
   <pre>
     <?php
 
-    require_once "./inc/functions.inc.php";
+      require_once "./inc/functions.inc.php";
 
-    $campaigns = [
-      'Spring Sale' => [
-        'AdSet1' => [
-          'name' => 'Discounted Gadgets'
+      $campaigns = [
+        'Spring Sale' => [
+          'AdSet1' => [
+            'name' => 'Discounted Gadgets'
+          ],
+          'AdSet2' => [
+            'name' => 'Outdoor Equipment'
+          ],
         ],
-        'AdSet2' => [
-          'name' => 'Outdoor Equipment'
+        'Holiday Deals' => [
+          'AdSet1' => [
+            'name' => 'Winter Apparel'
+          ],
+          'AdSet2' => [
+            'name' => 'Electronics Special'
+          ],
         ],
-      ],
-      'Holiday Deals' => [
-        'AdSet1' => [
-          'name' => 'Winter Apparel'
-        ],
-        'AdSet2' => [
-          'name' => 'Electronics Special'
-        ],
-      ],
-    ];
+      ];
 
-    // I didn't think to use `implode()` to better format the output by selecting the desired separator.
+      // I didn't think to use `implode()` to better format the output by selecting the desired separator.
 
-    foreach ($campaigns as $campaign => $adSet) {
-      echo e("- " . $campaign . ": ");
-      $adSetsName = [];
-      foreach ($adSet as $set => $item) {
-        $adSetsName[] = '"' . $item["name"] . '"';
+      foreach ($campaigns as $campaign => $adSet) {
+        echo e("- " . $campaign . ": ");
+        $adSetsName = [];
+        foreach ($adSet as $set => $item) {
+          $adSetsName[] = '"' . $item["name"] . '"';
+        }
+        echo e(implode(", ", $adSetsName) . "\n");
       }
-      echo e(implode(", ", $adSetsName) . "\n");
-    }
 
     ?>
   </pre>

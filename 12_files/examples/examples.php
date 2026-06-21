@@ -1,3 +1,5 @@
+<!--#TODO: Need to try doing it like in Section 6, so that all the examples are on a single page.-->
+
 <?php require_once "../../header.inc.php" ?>
 <h3>Examples</h3>
 <main>

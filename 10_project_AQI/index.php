@@ -1,11 +1,11 @@
 <?php
 
-require __DIR__ . "/inc/functions.inc.php";
+  require __DIR__ . "/inc/functions.inc.php";
 
-$cities = json_decode(
-  file_get_contents(__DIR__ . "/data/index.json"),
-  true
-);
+  $cities = json_decode(
+    file_get_contents(__DIR__ . "/data/index.json"),
+    true
+  );
 
 ?>
 

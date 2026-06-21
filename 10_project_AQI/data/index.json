@@ -1,14 +1,74 @@
 [
-    {"city": "Berlin", "country": "Germany", "flag": "🇩🇪", "filename": "berlin.json.bz2"},
-    {"city": "Cape Town", "country": "South Africa", "flag": "🇿🇦", "filename": "cape-town.json.bz2"},
-    {"city": "Dubai", "country": "United Arab Emirates", "flag": "🇦🇪", "filename": "dubai.json.bz2"},
-    {"city": "Mumbai", "country": "India", "flag": "🇮🇳", "filename": "mumbai.json.bz2"},
-    {"city": "Rio de Janeiro", "country": "Brazil", "flag": "🇧🇷", "filename": "rio-de-janeiro.json.bz2"},
-    {"city": "Singapore", "country": "Singapore", "flag": "🇸🇬", "filename": "singapore.json.bz2"},
-    {"city": "Cancun", "country": "Mexico", "flag": "🇲🇽", "filename": "cancun.json.bz2"},
-    {"city": "Colombo", "country": "Sri Lanka", "flag": "🇱🇰", "filename": "colombo.json.bz2"},
-    {"city": "Lima", "country": "Peru", "flag": "🇵🇪", "filename": "lima.json.bz2"},
-    {"city": "Nairobi", "country": "Kenya", "flag": "🇰🇪", "filename": "nairobi.json.bz2"},
-    {"city": "Seoul", "country": "South Korea", "flag": "🇰🇷", "filename": "seoul.json.bz2"},
-    {"city": "Sydney", "country": "Australia", "flag": "🇦🇺", "filename": "sydney.json.bz2"}
+  {
+    "city": "Berlin",
+    "country": "Germany",
+    "flag": "🇩🇪",
+    "filename": "berlin.json.bz2"
+  },
+  {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "flag": "🇿🇦",
+    "filename": "cape-town.json.bz2"
+  },
+  {
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "flag": "🇦🇪",
+    "filename": "dubai.json.bz2"
+  },
+  {
+    "city": "Mumbai",
+    "country": "India",
+    "flag": "🇮🇳",
+    "filename": "mumbai.json.bz2"
+  },
+  {
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "filename": "rio-de-janeiro.json.bz2"
+  },
+  {
+    "city": "Singapore",
+    "country": "Singapore",
+    "flag": "🇸🇬",
+    "filename": "singapore.json.bz2"
+  },
+  {
+    "city": "Cancun",
+    "country": "Mexico",
+    "flag": "🇲🇽",
+    "filename": "cancun.json.bz2"
+  },
+  {
+    "city": "Colombo",
+    "country": "Sri Lanka",
+    "flag": "🇱🇰",
+    "filename": "colombo.json.bz2"
+  },
+  {
+    "city": "Lima",
+    "country": "Peru",
+    "flag": "🇵🇪",
+    "filename": "lima.json.bz2"
+  },
+  {
+    "city": "Nairobi",
+    "country": "Kenya",
+    "flag": "🇰🇪",
+    "filename": "nairobi.json.bz2"
+  },
+  {
+    "city": "Seoul",
+    "country": "South Korea",
+    "flag": "🇰🇷",
+    "filename": "seoul.json.bz2"
+  },
+  {
+    "city": "Sydney",
+    "country": "Australia",
+    "flag": "🇦🇺",
+    "filename": "sydney.json.bz2"
+  }
 ]

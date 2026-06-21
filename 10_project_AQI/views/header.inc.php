@@ -8,11 +8,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Air Quality Project</title>
   <link rel="stylesheet" href="/simple.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header>
+    <h1><a href="/modern_php/index.php">Projekte aus dem Kurs „Modern PHP“</a></h1>
     <h1>AQI-Explorer</h1>
     <nav><a href="index.php">Overview</a></nav>
   </header>
   <main>
-

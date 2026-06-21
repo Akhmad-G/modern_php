@@ -19,7 +19,7 @@ include './inc/images.inc.php';
     </div>
   <?php endif; ?>
 
-  <a href="./gallery.php">Back to Gallery</a>
+  <a href="./gallery.php" class="backButton">Back to Gallery</a>
 </div>
 
 <?php include './views/footer.php'; ?>

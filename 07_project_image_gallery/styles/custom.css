@@ -21,11 +21,21 @@ body {
   object-fit: cover;
 }
 
-p {
-  text-align: center;
+p.description {
+  text-align: justify;
   font-size: 1.2rem;
+  margin: 0 15%;
 }
 
 .poster {
-  width: 50%;
+  width: 70%;
+  margin: 0 15%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.backButton {
+  margin: 1rem 40%;
 }

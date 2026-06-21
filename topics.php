@@ -11,5 +11,5 @@
     "Kapitel 9. Nested Arrays" => "./09_nested_arrays/nested_arrays.php",
     "Kapitel 10. Project: Air Quality Data Browser" => "./10_project_AQI/index.php",
     "Kapitel 11. For and the While Loops" => "./11_for_and_while_loops/for_while_loops.php",
-    "Kapitel 12. Project: Built an Auto-Update Travel Showcase (and Explore File Systems)" => "./12_files/index.html",
+    "Kapitel 12. Project: Built an Auto-Update Travel Showcase (and Explore File Systems)" => "./12_files/index.php",
   ];

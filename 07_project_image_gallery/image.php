@@ -1,6 +1,6 @@
 <?php
-include './inc/functions.inc.php';
-include './inc/images.inc.php';
+  include './inc/functions.inc.php';
+  include './inc/images.inc.php';
 
 ?>
 <?php include './views/header.php'; ?>

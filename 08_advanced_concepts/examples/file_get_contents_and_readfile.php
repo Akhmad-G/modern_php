@@ -8,12 +8,12 @@
 </head>
 <body><pre><?php
 
-    echo "Look at the 'page source'";
+      echo "Look at the 'page source'";
 
-    // $text = file_get_contents(__DIR__ . '/inc/functions.inc.php');
-    // echo $text;
+      // $text = file_get_contents(__DIR__ . '/inc/functions.inc.php');
+      // echo $text;
 
-    readfile(__DIR__ . '/inc/functions.inc.php');
+      readfile(__DIR__ . '/inc/functions.inc.php');
 
 
     ?>

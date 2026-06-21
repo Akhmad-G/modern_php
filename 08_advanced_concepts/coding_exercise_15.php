@@ -14,35 +14,35 @@
   <pre>
     <?php
 
-    require_once "examples/inc/functions.inc.php";
+      require_once "examples/inc/functions.inc.php";
 
-    $emailContent = "Dear alex  ,\n\nWe hope this message finds you well.\n\nThis month, we are focusing on personal growth and innovation. Don't miss out on our exclusive insights!\n\nBest wishes,\nYour Discovery Network Team\nP.S. Check out our latest blog post!";
+      $emailContent = "Dear alex  ,\n\nWe hope this message finds you well.\n\nThis month, we are focusing on personal growth and innovation. Don't miss out on our exclusive insights!\n\nBest wishes,\nYour Discovery Network Team\nP.S. Check out our latest blog post!";
 
 
-    $emailBodyStart = strpos($emailContent, "\n") + 2;
-    $emailBodyEnd = strpos($emailContent, "Best wishes");
-    $emailBodyLength = strlen($emailContent) - $emailBodyStart - (strlen($emailContent) - $emailBodyEnd);
+      $emailBodyStart = strpos($emailContent, "\n") + 2;
+      $emailBodyEnd = strpos($emailContent, "Best wishes");
+      $emailBodyLength = strlen($emailContent) - $emailBodyStart - (strlen($emailContent) - $emailBodyEnd);
 
-    $emailSalutation = substr($emailContent, 0, $emailBodyStart);
-    $emailBody = substr($emailContent, $emailBodyStart, $emailBodyLength);
-    $emailSignature = substr($emailContent, $emailBodyEnd, strlen($emailContent) - $emailBodyEnd);
+      $emailSalutation = substr($emailContent, 0, $emailBodyStart);
+      $emailBody = substr($emailContent, $emailBodyStart, $emailBodyLength);
+      $emailSignature = substr($emailContent, $emailBodyEnd, strlen($emailContent) - $emailBodyEnd);
 
-//    var_dump($emailSalutation);
-//    var_dump($emailBody);
-//    var_dump($emailSignature);
+      //    var_dump($emailSalutation);
+      //    var_dump($emailBody);
+      //    var_dump($emailSignature);
 
-    $emailPreview = substr($emailBody, 0, 30) . "...";
-    var_dump($emailPreview);
+      $emailPreview = substr($emailBody, 0, 30) . "...";
+      var_dump($emailPreview);
 
-    $charCount = strlen($emailBody);
+      $charCount = strlen($emailBody);
 
-    $name = substr($emailSalutation, 4, strlen($emailSalutation) - 7);    // "Dear" - 4 char, "," - 1 char, \n\n - 2 char.
-    $name = trim($name);
-    $name = ucfirst(strtolower($name));
+      $name = substr($emailSalutation, 4, strlen($emailSalutation) - 7);    // "Dear" - 4 char, "," - 1 char, \n\n - 2 char.
+      $name = trim($name);
+      $name = ucfirst(strtolower($name));
 
-    $emailSalutation = "Dear " . $name . ",\n\n";
-    $updatedEmailContent = $emailSalutation . $emailBody . $emailSignature;
-    var_dump($updatedEmailContent);
+      $emailSalutation = "Dear " . $name . ",\n\n";
+      $updatedEmailContent = $emailSalutation . $emailBody . $emailSignature;
+      var_dump($updatedEmailContent);
 
     ?>
   </pre>

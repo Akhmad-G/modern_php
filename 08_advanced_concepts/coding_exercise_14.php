@@ -14,22 +14,24 @@
   <pre>
     <?php
 
-    require_once "examples/inc/functions.inc.php";
+      require_once "examples/inc/functions.inc.php";
 
-    $emailContent = "Subject: Unlock Your Potential with Us!\n\nDear Alex,\n\nWe hope this message finds you well.\n\nQuote of the Month:\n\nDr. Albert Szent-Györgyi: 'Innovation is seeing what everybody has seen and thinking what nobody has thought.'\n\nBest wishes,\nYour Discovery Network Team\nP.S. Don't miss our special announcement next month!";
+      $emailContent = "Subject: Unlock Your Potential with Us!\n\nDear Alex,\n\nWe hope this message finds you well.\n\nQuote of the Month:\n\nDr. Albert Szent-Györgyi: 'Innovation is seeing what everybody has seen and thinking what nobody has thought.'\n\nBest wishes,\nYour Discovery Network Team\nP.S. Don't miss our special announcement next month!";
 
-    $contentArray = explode("\n\n", $emailContent);
-    //    var_dump($contentArray);
+      $contentArray = explode("\n\n", $emailContent);
+      //    var_dump($contentArray);
 
-    $quoteIndex = array_search('Quote of the Month:', $contentArray) + 1;
-    //    if ($quoteIndex) echo $contentArray[$quoteIndex] . "\n";
-    //    else echo "Quote not found";
+      $quoteIndex = array_search('Quote of the Month:', $contentArray) + 1;
+      //    if ($quoteIndex) echo $contentArray[$quoteIndex] . "\n";
+      //    else echo "Quote not found";
 
-    $author = explode(": ", $contentArray[$quoteIndex])[0];
-    $quote = explode(": ", $contentArray[$quoteIndex])[1];
-    $contentArray[$quoteIndex] = $quote . " - " . $author;
+      $author = explode(": ", $contentArray[$quoteIndex])[0];
+      $quote = explode(": ", $contentArray[$quoteIndex])[1];
+      $contentArray[$quoteIndex] = $quote . " - " . $author;
 
-    $modifiedEmailContent = implode("\n\n", $contentArray);
+      $modifiedEmailContent = implode("\n\n", $contentArray);
+
+      echo e($modifiedEmailContent);
 
     ?>
   </pre>

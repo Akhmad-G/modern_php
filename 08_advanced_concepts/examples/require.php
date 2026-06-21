@@ -8,13 +8,13 @@
 </head>
 <body><pre><?php
 
-    // require __DIR__ . '/inc/functions.php';
-    require_once __DIR__ . '/inc/all.inc.php';
-    require_once __DIR__ . '/inc/functions.inc.php';
-    require_once __DIR__ . '/inc/functions.inc.php';
-    include_once __DIR__ . '/inc/functions.inc.php';
+      // require __DIR__ . '/inc/functions.php';
+      require_once __DIR__ . '/inc/all.inc.php';
+      require_once __DIR__ . '/inc/functions.inc.php';
+      require_once __DIR__ . '/inc/functions.inc.php';
+      include_once __DIR__ . '/inc/functions.inc.php';
 
-    $text = 'PHP is amazing!';
+      $text = 'PHP is amazing!';
 
     ?></pre>
   <h1><?php echo e($text); ?></h1>

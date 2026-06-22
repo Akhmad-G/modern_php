@@ -1,5 +1,5 @@
 <?php require_once "../header.inc.php" ?>
-<h3><?php echo array_keys($topics)[1] ?></h3>
+<h3><?php echo e(array_keys($topics)[1]) ?></h3>
 <main>
   <ol>
     <li><a href="./01_first_steps/01_first_steps.php">First Steps</a></li>

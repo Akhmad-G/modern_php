@@ -1,5 +1,4 @@
 <?php require_once "../header.inc.php" ?>
-<?php require_once "../functions.inc.php" ?>
 <h3><?php echo e(array_keys($topics)[10]) ?></h3>
 <main>
   <ol>

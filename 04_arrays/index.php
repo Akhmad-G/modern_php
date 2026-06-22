@@ -1,5 +1,5 @@
 <?php require_once "../header.inc.php" ?>
-<h3><?php echo array_keys($topics)[3] ?></h3>
+<h3><?php echo e(array_keys($topics)[3]) ?></h3>
 <main>
   <ol>
     <li><a href="coding_exercise_7.php">Coding Exercise 7</a></li>

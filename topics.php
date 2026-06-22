@@ -12,4 +12,5 @@
     "Kapitel 10. Project: Air Quality Data Browser" => "./10_project_AQI/index.php",
     "Kapitel 11. For and the While Loops" => "./11_for_and_while_loops/for_while_loops.php",
     "Kapitel 12. Project: Built an Auto-Update Travel Showcase (and Explore File Systems)" => "./12_files/index.php",
+    "Kapitel 13. Intro to MariaDB/MySQL Databases in phpMyAdmin" => "./13_intro_to_mariaDB/index.php",
   ];

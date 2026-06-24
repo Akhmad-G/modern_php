@@ -44,7 +44,7 @@
     $mainUrl = 'http://localhost/modern_php/index.php';
     $fallbackUrl = 'https://modern-php.ddev.artif.dev/index.php';
 
-    $link = getStartPageUrl($mainUrl) ? '/modern_php/index.php' : $fallbackUrl;
+    $link = getStartPageUrl($mainUrl) ? '/modern_php/oop_zip_file.php' : $fallbackUrl;
   ?>
 
 
